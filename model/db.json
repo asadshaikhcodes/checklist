@@ -1,0 +1,55 @@
+{
+  "checklists": [
+    {
+      "id": 1,
+      "title": "React Router",
+      "categoryId": 1,
+      "categoryTitle": "Study",
+      "description": "study React Router",
+      "status": "completed",
+      "dueDate": "2022-09-26"
+    },
+    {
+      "id": 2,
+      "title": "React Router",
+      "categoryId": 1,
+      "categoryTitle": "Study",
+      "description": "study React Router",
+      "status": "in progress",
+      "dueDate": "2022-09-26"
+    },
+    {
+      "id": 3,
+      "title": "React Router",
+      "categoryId": 1,
+      "categoryTitle": "Study",
+      "description": "study React Router",
+      "status": "completed",
+      "dueDate": "2022-09-26"
+    },
+    {
+      "id": 4,
+      "title": "React Router",
+      "categoryId": 1,
+      "categoryTitle": "Study",
+      "description": "study React Router",
+      "status": "overdue",
+      "dueDate": "2022-09-26"
+    },
+    {
+      "id": 5,
+      "title": "React Router",
+      "categoryId": 1,
+      "categoryTitle": "Study",
+      "description": "study React Router",
+      "status": "completed",
+      "dueDate": "2022-09-26"
+    }
+  ],
+  "categories": [
+    { "id": 1, "title": "Study" },
+    { "id": 2, "title": "Chores" },
+    { "id": 3, "title": "Work" },
+    { "id": 4, "title": "Expenses" }
+  ]
+}
