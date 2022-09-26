@@ -1,7 +1,13 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ChecklistsTableView from "./ChecklistsTableView";
 
-function Checklists() {
+function Checklists({
+  isFetchChecklistData,
+  checklistDeleted,
+  editHandler,
+  deleteHandler,
+  detailsHandler,
+}) {
   const [checklists, setChecklists] = useState([]);
 
   const getChecklists = async () => {
@@ -15,35 +21,36 @@ function Checklists() {
       });
   };
 
-  const checklistEditHandler = useCallback((id) => {
-    console.log("checklist edit handler");
-    console.log(id);
-  }, []);
+  // const checklistEditHandler = useCallback((id) => {
+  //   console.log("checklist edit handler");
+  //   console.log(id);
+  // }, []);
 
-  const checklistDetailsHandler = useCallback((id) => {
-    console.log("checklist details handler");
-    console.log(id);
-  }, []);
+  // const checklistDetailsHandler = useCallback((id) => {
+  //   console.log("checklist details handler");
+  //   console.log(id);
+  // }, []);
 
-  const checklistDeleteHandler = useCallback((id) => {
-    console.log("checklist delete handler");
-    console.log(id);
-  }, []);
+  // const checklistDeleteHandler = useCallback((id) => {
+  //   console.log("checklist delete handler");
+  //   console.log(id);
+  // }, []);
 
   useEffect(() => {
     getChecklists();
-  }, []);
+    console.log("checklist effect called");
+  }, [isFetchChecklistData]);
 
   return (
     <>
       <ChecklistsTableView
         checklists={checklists}
-        checklistDeleteHandler={checklistDeleteHandler}
-        checklistDetailsHandler={checklistDetailsHandler}
-        checklistEditHandler={checklistEditHandler}
+        checklistDeleteHandler={deleteHandler}
+        checklistDetailsHandler={detailsHandler}
+        checklistEditHandler={editHandler}
       />
     </>
   );
 }
 
-export default Checklists;
+export default React.memo(Checklists);

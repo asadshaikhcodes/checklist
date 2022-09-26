@@ -1,11 +1,11 @@
-import "antd/dist/antd.css";
+import "antd/dist/antd.min.css";
 import "./App.css";
-import Checklists from "./components/Checklists";
+import ChecklistsHome from "./components/ChecklistsHome";
 
 function App() {
   return (
     <div className="App">
-      <Checklists />
+      <ChecklistsHome />
     </div>
   );
 }

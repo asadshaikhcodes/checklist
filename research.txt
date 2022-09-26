@@ -1,0 +1,15 @@
+date.clone is not a function solution
+https://stackoverflow.com/questions/64527820/antd-datepicker-date-clone-is-not-a-function
+
+antd form inputs not updating values
+https://stackoverflow.com/questions/60949265/ant-design-input-component-not-updating-value
+
+https://github.com/ant-design/ant-design/issues/22789
+
+initial values not updating in antd form
+https://github.com/ant-design/ant-design/issues/22372
+
+
+free cloud api access to store data
+https://stackoverflow.com/questions/9024819/free-cloud-data-stores-that-use-get-post
+https://www.kvstore.io/#/documentation/public-write

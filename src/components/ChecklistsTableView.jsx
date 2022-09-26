@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Grid, Col, Table, Tag, Tooltip, Button, Divider } from "antd";
+import { Table, Tag, Tooltip, Button, Divider, Popconfirm } from "antd";
 import {
   EditOutlined,
   DeleteOutlined,
@@ -11,41 +11,46 @@ function ChecklistsTableView({
   checklistEditHandler,
   checklistDetailsHandler,
   checklistDeleteHandler,
+  cancelDeleteHandler,
 }) {
   const checklistsTableColumns = [
-    { title: "Title", dataIndex: "title" },
+    { title: "Title", dataIndex: "title", key: "title" },
     {
       title: "Category",
       dataIndex: "category",
-      render: (text, record) => (
-        <Tag color="#2db7f5">{record.categoryTitle}</Tag>
-      ),
+      key: "category",
+      render: (text, record) => <Tag color="#2db7f5">{record.category}</Tag>,
     },
     {
       title: "Status",
       dataIndex: "status",
+      key: "status",
       render: (text, record) => (
         <Tag
           color={
-            record.status === "completed"
+            record.status && record.status === "completed"
               ? "success"
               : record.status === "in progress"
               ? "processing"
               : "error"
           }
         >
-          {record.status}
+          {record.status ? record.status : "untracked"}
         </Tag>
       ),
     },
     {
       title: "Due Date",
       dataIndex: "dueDate",
-      render: (text, record) => new Date(record.dueDate).toLocaleDateString(),
+      key: "dueDate",
+      render: (text, record) => {
+        return record.dueDate && new Date(record.dueDate).toLocaleDateString();
+      },
     },
     {
       title: "Actions",
       dataIndex: "actions",
+      key: "actions",
       render: (text, record) => {
         return (
           <div
@@ -71,20 +76,25 @@ function ChecklistsTableView({
               />
             </Tooltip>
             <Divider type="vertical" />
-            <Button
-              type="danger"
-              icon={<DeleteOutlined />}
-              onClick={() => checklistDeleteHandler(record.id)}
-            />
+            <Popconfirm
+              title="Are you sure to delete this checklist?"
+              okText="Delete"
+              cancelText="Cancel"
+              onConfirm={()=>checklistDeleteHandler(record.id)}
+              cancelButtonProps={cancelDeleteHandler}
+            >
+              <Button
+                type="danger"
+                icon={<DeleteOutlined />}
+              />
+            </Popconfirm>
           </div>
         );
       },
     },
   ];
 
-  return (
-    <Table dataSource={checklists} columns={checklistsTableColumns} />
-  );
+  return <Table dataSource={checklists} columns={checklistsTableColumns} />;
 }
 
 export default ChecklistsTableView;

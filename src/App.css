@@ -28,6 +28,28 @@
   color: #61dafb;
 }
 
+.ant-layout-sider {
+  background-color: transparent !important;
+}
+
+.ant-layout,
+.ant-layout-has-sider {
+  background-color: transparent !important;
+}
+
+.checklist-content {
+  padding: 25px 25px 0 25px;
+}
+
+.ant-layout-header {
+  padding: 0 30px;
+  background-color: transparent;
+}
+
+.checklist-menu {
+  height: 100%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
