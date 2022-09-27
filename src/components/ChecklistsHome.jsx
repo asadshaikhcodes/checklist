@@ -129,7 +129,14 @@ function ChecklistsHome() {
       })
       .then((responseData) => {
         console.log("delete response data", responseData);
-        message.success("checklist deleted successfully!");
+        setDataSubmitted((prevState) => {
+          return (prevState = true);
+        });
+        message.success("checklist deleted successfully!", 2, () => {
+          setDataSubmitted((prevState) => {
+            return (prevState = false);
+          });
+        });
       });
   }, []);
 

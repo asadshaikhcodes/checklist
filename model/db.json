@@ -3,11 +3,38 @@
     {
       "id": 1,
       "title": "Finish Checklist App",
-      "description": "",
+      "description": "Finish crud operations in checklist app",
       "status": "completed",
-      "dueDate": "2022-09-26T19:32:11.949Z",
+      "dueDate": "2022-09-26T06:05:57.891Z",
       "categoryId": 3,
       "category": "Work"
+    },
+    {
+      "id": 2,
+      "title": "Implement Categories feature",
+      "description": "TEst description",
+      "status": "completed",
+      "dueDate": "2022-09-27T06:07:06.718Z",
+      "categoryId": 1,
+      "category": "Study"
+    },
+    {
+      "id": 3,
+      "title": "Finish Chores",
+      "description": "",
+      "status": "in progress",
+      "dueDate": "2022-09-27T06:10:03.932Z",
+      "categoryId": 2,
+      "category": "Chores"
+    },
+    {
+      "title": "FInish app",
+      "description": "test description",
+      "status": "",
+      "dueDate": "2022-09-28T06:14:32.692Z",
+      "categoryId": 1,
+      "category": "Study",
+      "id": 4
     }
   ],
   "categories": [

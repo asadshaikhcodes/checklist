@@ -3,13 +3,13 @@ import { Table, Tag, Tooltip, Button, Divider, Popconfirm } from "antd";
 import {
   EditOutlined,
   DeleteOutlined,
-  EllipsisOutlined,
+  // EllipsisOutlined,
 } from "@ant-design/icons";
 
 function ChecklistsTableView({
   checklists,
   checklistEditHandler,
-  checklistDetailsHandler,
+  // checklistDetailsHandler,
   checklistDeleteHandler,
   cancelDeleteHandler,
 }) {
@@ -68,14 +68,14 @@ function ChecklistsTableView({
               />
             </Tooltip>
             <Divider type="vertical" />
-            <Tooltip title="view details">
+            {/* <Tooltip title="view details">
               <Button
                 type="primary"
                 icon={<EllipsisOutlined />}
                 onClick={() => checklistDetailsHandler(record.id)}
               />
             </Tooltip>
-            <Divider type="vertical" />
+            <Divider type="vertical" /> */}
             <Popconfirm
               title="Are you sure to delete this checklist?"
               okText="Delete"

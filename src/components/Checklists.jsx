@@ -3,10 +3,9 @@ import ChecklistsTableView from "./ChecklistsTableView";
 
 function Checklists({
   isFetchChecklistData,
-  checklistDeleted,
   editHandler,
   deleteHandler,
-  detailsHandler,
+  // detailsHandler,
 }) {
   const [checklists, setChecklists] = useState([]);
 
@@ -46,7 +45,7 @@ function Checklists({
       <ChecklistsTableView
         checklists={checklists}
         checklistDeleteHandler={deleteHandler}
-        checklistDetailsHandler={detailsHandler}
+        // checklistDetailsHandler={detailsHandler}
         checklistEditHandler={editHandler}
       />
     </>
