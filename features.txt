@@ -1,0 +1,5 @@
+present checklists inside a board not category
+show create board or create checklist for new user
+let user rename the menu titles e.g Checklists menu title can be renamed to user defined, Boards menu title can be renamed to use defined.
+view checklist group by accordion
+view checklist group by lists

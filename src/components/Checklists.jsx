@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ChecklistsTableView from "./ChecklistsTableView";
+import ChecklistsTableView from "../Views/checklist/TableView";
 
 function Checklists({
   isFetchChecklistData,

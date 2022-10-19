@@ -1,19 +1,4 @@
-import React from "react";
-import { Table, Tag, Tooltip, Button, Divider, Popconfirm } from "antd";
-import {
-  EditOutlined,
-  DeleteOutlined,
-  // EllipsisOutlined,
-} from "@ant-design/icons";
-
-function ChecklistsTableView({
-  checklists,
-  checklistEditHandler,
-  // checklistDetailsHandler,
-  checklistDeleteHandler,
-  cancelDeleteHandler,
-}) {
-  const checklistsTableColumns = [
+export const CHECKLIST_TABLE_VIEW_COLUMNS = [
     { title: "Title", dataIndex: "title", key: "title" },
     {
       title: "Category",
@@ -93,8 +78,3 @@ function ChecklistsTableView({
       },
     },
   ];
-
-  return <Table dataSource={checklists} columns={checklistsTableColumns} />;
-}
-
-export default ChecklistsTableView;
